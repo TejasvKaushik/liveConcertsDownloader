@@ -21,7 +21,5 @@ def main():
     for link, title in zip(links, titles):
         downloadShow(link, title, newPath)
 
-
-
 if __name__ == "__main__":
     main()
