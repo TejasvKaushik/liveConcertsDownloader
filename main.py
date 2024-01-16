@@ -1,5 +1,6 @@
 from liveShowDownloaderUtil.getShowLinks import getShowLinks
 from liveShowDownloaderUtil.downloadShows import downloadShow
+import path as path
 import os
 
 def main():
@@ -8,8 +9,9 @@ def main():
     links, titles = getShowLinks(artist)
     print(len(links))
 
-
-    newPath = r'D:\Music\LiveConcerts\{}'.format(artist)
+    # newPath = r'D:\Music\LiveConcerts\{}'.format(artist)
+    basePath = path.BASE_PATH
+    newPath = basePath + artist
     if not os.path.exists(newPath):
         os.makedirs(newPath)
     print(newPath)
